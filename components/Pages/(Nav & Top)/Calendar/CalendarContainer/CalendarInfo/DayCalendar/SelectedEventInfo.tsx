@@ -21,16 +21,18 @@ export default function SelectedEventInfo({
   const selectedEventData = selectedCalendarItem?.data;
   return (
     <div
-      className={`h-full bg-white dark:bg-gray-900 rounded-2xl shadow-lg transition-all duration-300 flex-nowrap ${
-        selectedEventData ? "w-1/3 p-6" : "w-0"
+      className={`h-full bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 flex-nowrap ${
+        selectedEventData ? "w-1/3 p-8" : "w-0"
       }`}
     >
       {selectedEventData && (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <div className="flex items-start justify-between">
             <div>
-              <div className="text-gray-400 text-xs">Evento</div>
-              <div className="text-primary-500 mb-2">
+              <div className="text-gray-500 text-sm font-medium uppercase tracking-wider">
+                Evento
+              </div>
+              <div className="text-2xl font-bold text-gray-900 mt-1">
                 {selectedEventData.title}
               </div>
             </div>
@@ -42,30 +44,30 @@ export default function SelectedEventInfo({
             />
           </div>
 
-          <div className="flex gap-8">
-            <div>
-              <div className="flex items-center gap-2 text-black">
-                <Clock size={20} />
+          <div className="grid grid-cols-2 gap-8">
+            <div className="bg-gray-50/50 rounded-xl p-4">
+              <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+                <Clock size={18} />
                 <span>Comienza</span>
               </div>
-              <div className="text-sm text-gray-400 mt-1">
+              <div className="text-sm text-gray-500">
                 {format(selectedEventData.startDate, "HH:mm")}
               </div>
             </div>
-            <div>
-              <div className="flex items-center gap-2 text-black">
-                <Clock size={20} />
+            <div className="bg-gray-50/50 rounded-xl p-4">
+              <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+                <Clock size={18} />
                 <span>Finaliza</span>
               </div>
-              <div className="text-sm text-gray-400 mt-1">
-                {format(selectedEventData.endDate, "HH:mm")}{" "}
+              <div className="text-sm text-gray-500">
+                {format(selectedEventData.endDate, "HH:mm")}
               </div>
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 text-black mb-1">
-              <User size={20} />
+          <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="flex items-center gap-2 text-gray-700 font-medium mb-3">
+              <User size={18} />
               <span>Participantes</span>
             </div>
             <div className="flex items-center -space-x-2">
@@ -74,58 +76,60 @@ export default function SelectedEventInfo({
                   key={i}
                   src={p.avatar}
                   alt={p.name}
-                  className="w-12 h-12 rounded-full border-2 border-white dark:border-gray-900 -ml-2 first:ml-0"
-                  width={48}
-                  height={48}
+                  className="w-10 h-10 rounded-full border-2 border-white shadow-sm hover:scale-110 transition-transform duration-200"
+                  width={40}
+                  height={40}
                 />
               ))}
-              <button className="w-12 h-12 rounded-full border border-secondary-600 flex items-center justify-center text-secondary-600 bg-white">
-                <Plus size={28} />
+              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-gray-300 hover:text-gray-600 hover:scale-110 transition-all duration-200">
+                <Plus size={24} />
               </button>
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 text-black mb-1">
-              <MapPin size={20} />
+          <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+              <MapPin size={18} />
               <span>Ubicación</span>
             </div>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-500">
               {/* {selectedEvent.location || "San Rafael - Mendoza"} */}
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 text-black mb-1">
-              <MapPin size={20} />
+          <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+              <MapPin size={18} />
               <span>Categoria</span>
             </div>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-500">
               {selectedEventData.category || "No Categoria"}
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 text-black mb-1">
-              <Palette size={20} />
+          <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+              <Palette size={18} />
               <span>Color del Evento</span>
             </div>
-            <span
-              style={{ color: selectedEventData.color }}
-              className="text-sm text-gray-400"
-            >
-              {selectedEventData.color}
-            </span>
+            <div className="flex items-center gap-3">
+              <div
+                className="w-8 h-8 rounded-full border border-gray-200 shadow-sm"
+                style={{ backgroundColor: selectedEventData.color }}
+              />
+              <span className="text-sm text-gray-500">
+                {selectedEventData.color}
+              </span>
+            </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 text-black mb-1">
-              <LinkIcon size={20} />
+          <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+              <LinkIcon size={18} />
               <span>Link</span>
             </div>
             <a
-              // href={selectedEvent.link || "https://sherp-app.com/login"}
-              className="text-sm text-gray-400 underline break-all"
+              className="text-sm text-blue-600 hover:text-blue-700 underline break-all"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,12 +137,12 @@ export default function SelectedEventInfo({
             </a>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 text-black mb-1">
-              <Bell size={20} />
+          <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+              <Bell size={18} />
               <span>Recordatorios</span>
             </div>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-500">
               {/* {selectedEvent.reminder || "30 min. antes"} */}
             </div>
           </div>

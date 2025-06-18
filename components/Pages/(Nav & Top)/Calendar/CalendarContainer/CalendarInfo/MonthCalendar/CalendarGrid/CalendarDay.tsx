@@ -40,44 +40,51 @@ const CalendarDay = memo(
 
     return (
       <div
-        className={`text-center p-2 h-full cursor-pointer border border-primary-200 relative transition-all duration-300
-        ${isCurrentMonth ? "text-black" : "text-gray-400"}
-        ${
-          isToday
-            ? "bg-primary-400 text-white"
-            : "hover:bg-secondary-600 hover:text-white"
-        }`}
+        className={`relative p-3 h-full cursor-pointer transition-all duration-300 group
+          ${isCurrentMonth ? "bg-white/50" : "bg-gray-50/50"}
+          ${
+            isToday
+              ? "bg-primary-50/80 border-primary-200 shadow-sm"
+              : "hover:bg-white/80 border-gray-100 hover:shadow-md"
+          }
+          border rounded-xl backdrop-blur-sm`}
         aria-label={format(day, "EEEE, d MMMM yyyy", { locale: es })}
         onClick={handleSelectDay}
       >
-        {day.getDate()}
-        <div className="text-xs">
+        <div
+          className={`text-right mb-2 ${isToday ? "text-primary-600 font-semibold" : "text-gray-600 group-hover:text-gray-900"}`}
+        >
+          {day.getDate()}
+        </div>
+        <div className="space-y-1.5">
           {visibleCalendarItems.map((calendarItem, i) => (
             <div
               key={`${i}-${day.toISOString()}`}
-              className={`p-1 rounded flex flex-col ${
+              className={`p-2 rounded-lg text-sm transition-all duration-200 ${
                 isSameDay(new Date(calendarItem.data.startDate), new Date())
-                  ? "text-white"
-                  : "text-primary-500"
+                  ? "bg-primary-100/80 text-primary-700 shadow-sm"
+                  : "bg-gray-100/80 text-gray-700 group-hover:bg-white/80 group-hover:shadow-sm"
               }`}
               title={calendarItem.data.title}
             >
               <div className="flex items-center gap-2 truncate">
                 <Dot
-                  size={10}
+                  size={8}
                   backgroundColor={
                     isSameDay(new Date(calendarItem.data.startDate), new Date())
-                      ? "white"
-                      : "#014e44"
+                      ? "#2563eb"
+                      : "#6b7280"
                   }
                 />
-                {calendarItem.data.title}
+                <span className="truncate font-medium">
+                  {calendarItem.data.title}
+                </span>
               </div>
             </div>
           ))}
           {remainingCount > 0 && (
-            <div className="flex items-center justify-center text- gap-1 mt-1">
-              <span>+{remainingCount} Tareas</span>
+            <div className="text-xs text-gray-500 text-center mt-2 group-hover:text-gray-600">
+              +{remainingCount} más
             </div>
           )}
         </div>
