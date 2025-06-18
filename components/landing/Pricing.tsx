@@ -1,0 +1,159 @@
+import { Check } from "lucide-react";
+import Button from "../Reusable/Button";
+
+const plans = [
+  {
+    name: "Plan Plus",
+    price: "€10",
+    period: "/mes",
+    description: "Ideal para profesionales y equipos pequeños",
+    features: [
+      "Todas las características del plan gratuito",
+      "Calendario avanzado y sincronización",
+      "Gestión de tareas ilimitada",
+      "Estadísticas y análisis detallados",
+      "Soporte prioritario",
+      "Integración con otras apps",
+    ],
+    popular: true,
+  },
+  {
+    name: "Plan Gratis",
+    price: "€0",
+    period: "/mes",
+    description: "Perfecto para empezar",
+    features: [
+      "Gestión básica de tareas",
+      "Calendario simple",
+      "Hasta 5 proyectos",
+      "Estadísticas básicas",
+      "Soporte por email",
+      "Acceso a la comunidad",
+    ],
+    popular: false,
+  },
+];
+
+export default function Pricing() {
+  return (
+    <div
+      className="bg-gradient-to-b from-white to-secondary-200 py-24"
+      id="planes"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-4xl font-extrabold text-primary-500 sm:text-5xl animate-fade-in">
+            Elige el plan que se ajuste a tus necesidades
+          </h2>
+          <p className="mt-6 text-xl text-primary-500 max-w-3xl mx-auto animate-slide-up">
+            Planes flexibles que crecen contigo. Sin sorpresas ni costes
+            ocultos.
+          </p>
+        </div>
+
+        <div className="mt-20 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8">
+          {plans.map((plan, index) => (
+            <div
+              key={plan.name}
+              className={`relative p-8 ${
+                plan.popular
+                  ? "bg-gradient-to-br from-primary-500 to-primary-800"
+                  : "bg-white"
+              } rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border ${
+                plan.popular ? "border-primary-400" : "border-primary-200"
+              } hover:border-primary-200 flex flex-col gap-6 animate-fade-in-up group`}
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-semibold bg-primary-200 text-primary-800">
+                    Más popular
+                  </span>
+                </div>
+              )}
+              <div className="flex-1">
+                <h3
+                  className={`text-2xl font-bold ${
+                    plan.popular ? "text-white" : "text-gray-900"
+                  }`}
+                >
+                  {plan.name}
+                </h3>
+                <p
+                  className={`mt-4 flex items-baseline ${
+                    plan.popular ? "text-white" : "text-gray-900"
+                  }`}
+                >
+                  <span className="text-6xl font-extrabold tracking-tight">
+                    {plan.price}
+                  </span>
+                  <span className="ml-1 text-xl font-semibold">
+                    {plan.period}
+                  </span>
+                </p>
+                <p
+                  className={`mt-6 text-lg ${
+                    plan.popular ? "text-primary-200" : "text-gray-500"
+                  }`}
+                >
+                  {plan.description}
+                </p>
+
+                <ul role="list" className="mt-8 space-y-6">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li
+                      key={feature}
+                      className="flex items-start animate-fade-in"
+                      style={{
+                        animationDelay: `${index * 200 + featureIndex * 100}ms`,
+                      }}
+                    >
+                      <div className="flex-shrink-0">
+                        <Check
+                          className={`h-6 w-6 ${
+                            plan.popular
+                              ? "text-primary-200"
+                              : "text-primary-500"
+                          }`}
+                        />
+                      </div>
+                      <span
+                        className={`ml-3 text-base ${
+                          plan.popular ? "text-white" : "text-gray-600"
+                        }`}
+                      >
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <Button
+                button={plan.popular ? "secondary" : "primary"}
+                type="button"
+                size="large"
+                href="/login"
+                className="w-full py-4 text-lg font-semibold hover:scale-105 transition-transform"
+              >
+                Empezar hoy
+              </Button>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-base text-gray-500">
+            ¿Necesitas un plan personalizado?{" "}
+            <a
+              href="#contacto"
+              className="font-medium text-primary-500 hover:text-primary-600 transition-colors duration-300"
+            >
+              Contáctanos
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
