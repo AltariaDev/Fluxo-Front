@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #a78bfa;
+
+    --color-primary-800: #001f2e;
+    --color-primary-700: #002a3d;
+    --color-primary-500: #003049;
+    --color-primary-400: #004d6d;
+    --color-primary-300: #006a91;
+    --color-primary-200: #0087b5;
+
+    --color-secondary-700: #0077b6;
+    --color-secondary-600: #0096c7;
+    --color-secondary-500: #00b4d8;
+    --color-secondary-400: #48cae4;
+    --color-secondary-200: #90e0ef;
+    --color-secondary-100: #caf0f8;
+
+    --color-tertiary-700: #6b46c1;
+    --color-tertiary-600: #805ad5;
+    --color-tertiary-500: #9f7aea;
+    --color-tertiary-400: #b794f4;
+    --color-tertiary-200: #d6bcfa;
+    --color-tertiary-100: #e9d8fd;
+
+    --color-error-light: #fecaca;
+    --color-error-medium: #f87171;
+    --color-error-dark: #dc2626;
+
+    --color-neutral-600: #1a1a1a;
+    --color-neutral-500: #202020;
+    --color-neutral-400: #676767;
+    --color-neutral-300: #adadad;
+    --color-neutral-200: #d1d1d1;
+    --color-neutral-100: #f6f6f6;
+
+    --color-text-primary: #7c3aed;
+    --color-text-secondary: #ffffff;
+    --color-text-tertiary: #8b5cf6;
+    --color-text-light: #d1d1d1;
+    --color-text-medium: #adadad;
+  }
+  .dark {
+    --color-background-primary: #7c3aed;
+    --color-background-secondary: #8b5cf6;
+
+    --color-primary-800: #0087b5;
+    --color-primary-700: #006a91;
+    --color-primary-500: #004d6d;
+    --color-primary-400: #003049;
+    --color-primary-300: #002a3d;
+    --color-primary-200: #001f2e;
+
+    --color-secondary-700: #caf0f8;
+    --color-secondary-600: #90e0ef;
+    --color-secondary-500: #48cae4;
+    --color-secondary-400: #00b4d8;
+    --color-secondary-200: #0096c7;
+    --color-secondary-100: #0077b6;
+
+    --color-tertiary-700: #e9d8fd;
+    --color-tertiary-600: #d6bcfa;
+    --color-tertiary-500: #b794f4;
+    --color-tertiary-400: #9f7aea;
+    --color-tertiary-200: #805ad5;
+    --color-tertiary-100: #6b46c1;
+
+    --color-error-light: #dc2626;
+    --color-error-medium: #f87171;
+    --color-error-dark: #fecaca;
+
+    --color-neutral-600: #ffffff;
+    --color-neutral-500: #e1e1e1;
+    --color-neutral-400: #bdbdbd;
+    --color-neutral-300: #777777;
+    --color-neutral-200: #303030;
+    --color-neutral-100: #7c3aed;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #7c3aed;
+    --color-text-tertiary: #4dd0e1;
+    --color-text-light: #7c3aed;
+    --color-text-medium: #c4b5fd;
+  }
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-background-primary: var(--color-background-primary);
+  --color-background-secondary: var(--color-background-secondary);
+
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-200: var(--color-primary-200);
+
+  --color-secondary-700: var(--color-secondary-700);
+  --color-secondary-600: var(--color-secondary-600);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-200: var(--color-secondary-200);
+  --color-secondary-100: var(--color-secondary-100);
+
+  --color-tertiary-700: var(--color-tertiary-700);
+  --color-tertiary-600: var(--color-tertiary-600);
+  --color-tertiary-500: var(--color-tertiary-500);
+  --color-tertiary-400: var(--color-tertiary-400);
+  --color-tertiary-200: var(--color-tertiary-200);
+  --color-tertiary-100: var(--color-tertiary-100);
+
+  --color-error-light: var(--color-error-light);
+  --color-error-medium: var(--color-error-medium);
+  --color-error-dark: var(--color-error-dark);
+
+  --color-neutral-600: var(--color-neutral-600);
+  --color-neutral-500: var(--color-neutral-500);
+  --color-neutral-400: var(--color-neutral-400);
+  --color-neutral-300: var(--color-neutral-300);
+  --color-neutral-200: var(--color-neutral-200);
+  --color-neutral-100: var(--color-neutral-100);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-tertiary: var(--color-text-tertiary);
+  --color-text-light: var(--color-text-light);
+  --color-text-medium: var(--color-text-medium);
+
+  --animate-opacStart: opacStart 0.5s ease-in-out;
+  @keyframes opacStart {
+    0% {
+      transform: translateY(5px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  --animate-fadeIn: fadeIn 0.3s ease-in-out;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  --animate-fadeOut: fadeOut 0.3s ease-in-out;
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  --animate-modalOpen: modalOpen 0.3s ease-in-out;
+  @keyframes modalOpen {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  --animate-modalClose: modalClose 0.3s ease-in-out;
+  @keyframes modalClose {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  --animate-blurStart: blurStart 0.5s ease-in-out forwards;
+  @keyframes blurStart {
+    from {
+      backdrop-filter: blur(0);
+    }
+    to {
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  --animate-blurEnd: blurEnd 0.5s ease-in-out forwards;
+  @keyframes blurEnd {
+    from {
+      backdrop-filter: blur(4px);
+    }
+    to {
+      backdrop-filter: blur(0);
+    }
+  }
+
+  --animate-marquee-vertical: marquee-vertical 20s linear infinite;
+  --animate-marquee2-vertical: marquee2-vertical 20s linear infinite;
+  --animate-marquee-vertical-reverse: marquee-vertical-reverse 95s linear
+    infinite;
+  --animate-marquee2-vertical-reverse: marquee2-vertical-reverse 95s linear
+    infinite;
+
+  @keyframes marquee-vertical-reverse {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes marquee2-vertical-reverse {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes marquee-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes marquee2-vertical {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-fast: float 4s ease-in-out infinite;
+  --animate-float-delay: float 6s ease-in-out 1s infinite;
+  --animate-float-delay-2: float 6s ease-in-out 2s infinite;
+  --animate-float-delay-3: float 6s ease-in-out 3s infinite;
+  --animate-float-delay-4: float 6s ease-in-out 4s infinite;
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-poppins);
+}

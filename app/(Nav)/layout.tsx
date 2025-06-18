@@ -1,0 +1,76 @@
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import "../globals.css";
+import NavBar from "@/components/Layouts/NavBar";
+import { getToken } from "@/lib";
+import { redirect } from "next/navigation";
+import PopUp from "@/components/Elements/General/PopUp";
+import Script from "next/script";
+import PWAInstallPrompt from "@/components/Elements/General/PWAInstallPrompt";
+import Modal from "@/components/Elements/General/Modal";
+import TimerInitializer from "@/config/TimerInitializer";
+import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import UserProfileInitializer from "@/config/UserProfileInitializer";
+import WebSocketInitializer from "@/config/WebSocketInitializer";
+import { PersistentPomodoro } from "@/components/Elements/PersistentPomodoro/PersistentPomodoro";
+import Toast from "@/components/Reusable/Toast";
+
+const poppinsSans = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const metadata: Metadata = {
+  title: "Fluxo | Para que estudiar no sea cuesta arriba",
+  manifest: "/manifest.json",
+  description:
+    "La herramienta de productividad diseñada para estudiantes y opositores que quieren organizar su estudio, medir su progreso y alcanzar sus metas.",
+};
+
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const token = await getToken();
+
+  if (!token) redirect("/login");
+  const locale = await getLocale();
+
+  return (
+    <html lang={locale}>
+      <head>
+        <Script id="hotjar-tracking" strategy="afterInteractive">
+          {`
+            (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:6381926,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </Script>
+      </head>
+      <body className={`${poppinsSans.variable} antialiased`}>
+        <UserProfileInitializer />
+        <WebSocketInitializer token={token} />
+        <TimerInitializer />
+        <NextIntlClientProvider>
+          <NavBar />
+          <main className="flex flex-col min-h-screen h-full md:w-auto w-screen flex-1">
+            <PersistentPomodoro />
+            {children}
+            <PopUp />
+            <PWAInstallPrompt />
+            <Toast />
+          </main>
+          <Modal />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
