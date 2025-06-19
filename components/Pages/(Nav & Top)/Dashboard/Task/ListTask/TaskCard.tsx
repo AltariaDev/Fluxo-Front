@@ -104,7 +104,7 @@ export default function TaskCard({
       ref={cardRef}
       className="group transform transition-all duration-300 hover:scale-[1.01] active:scale-[0.99]"
     >
-      <div className="flex items-center gap-3 bg-white rounded-xl border-2 border-secondary-200 hover:border-secondary-400 transition-colors duration-300 p-4">
+      <div className="flex items-center gap-3 bg-white rounded-lg border-2 border-secondary-200 hover:border-secondary-400 transition-colors duration-300 p-4">
         <input
           type="checkbox"
           checked={task.status === "completed"}

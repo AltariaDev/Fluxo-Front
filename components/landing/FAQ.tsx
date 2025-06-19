@@ -58,7 +58,7 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary-200 hover:border-primary-300 animate-fade-in-up group"
+                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-primary-200 hover:border-primary-300 animate-fade-in-up group"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <button

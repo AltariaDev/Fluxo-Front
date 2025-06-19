@@ -48,7 +48,7 @@ export default function StatusCards({
         <li key={item.id}>
           <button
             onClick={() => setFilter(filter === item.id ? "" : item.id)}
-            className={`w-full h-full cursor-pointer p-1 rounded-xl transition-all duration-300 ${
+            className={`w-full h-full cursor-pointer p-1 rounded-lg transition-all duration-300 ${
               filter === item.id
                 ? "bg-primary-500 text-white shadow-lg shadow-primary-500/20"
                 : "bg-white border-2 border-secondary-200 hover:border-secondary-400 text-primary-500"

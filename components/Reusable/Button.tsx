@@ -25,7 +25,7 @@ export default function Button({
   id?: string;
 }) {
   const commonClasses = `flex items-center justify-center gap-2 ${className} ${
-    size === "large" ? "rounded-2xl" : "rounded-lg"
+    size === "large" ? "rounded-lg" : "rounded-lg"
   } leading-6 transition-colors duration-300 ease-in-out ${
     state === "disabled" ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
   }`;

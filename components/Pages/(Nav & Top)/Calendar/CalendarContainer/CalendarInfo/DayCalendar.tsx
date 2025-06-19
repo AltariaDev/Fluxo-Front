@@ -107,7 +107,7 @@ const DayCalendarItem = ({
   return (
     <div
       ref={scrollCalendar}
-      className="flex w-full rounded-2xl relative gap-2 h-[calc(100vh-152px)] overflow-x-hidden overflow-y-auto"
+      className="flex w-full rounded-lg relative gap-2 h-[calc(100vh-152px)] overflow-x-hidden overflow-y-auto"
     >
       <TimeLeftBar length={48} divider={2} calc={1} />
       <TimeBar pos={getPosition(new Date())} />

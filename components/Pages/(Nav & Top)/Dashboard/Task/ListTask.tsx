@@ -1,6 +1,5 @@
-import Button from "@/components/Reusable/Button";
 import { TaskType } from "@/interfaces/Task/TaskType";
-import MountainTask from "@/components/Elements/Svg/Mountain/MountainTask";
+import RiverTask from "@/components/Elements/Svg/Mountain/RiverTask";
 import { useState, useEffect, useRef } from "react";
 import { useModalStore } from "@/stores/modalStore";
 import TaskCard from "./ListTask/TaskCard";
@@ -96,8 +95,8 @@ export default function ListTask({
           </div>
         ))
       ) : (
-        <div className="flex flex-col items-center gap-3 justify-center h-full bg-secondary-100 rounded-2xl py-4 transition-all duration-500">
-          <MountainTask />
+        <div className="flex flex-col items-center gap-3 justify-center h-full bg-secondary-100 rounded-lg py-4 transition-all duration-500">
+          <RiverTask />
           <p className="text-primary-500 text-xl text-center mx-1 font-medium">
             El día está en blanco. ¡Agrega tus tareas
             {filter ? ` ${filter}` : ""}!

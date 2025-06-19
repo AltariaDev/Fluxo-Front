@@ -27,7 +27,7 @@ export default function NavigationStats({
             selectedPage === item.link
               ? "text-black bg-secondary-100"
               : "text-gray-400"
-          }  hover:text-black hover:bg-secondary-200 rounded-2xl cursor-pointer transition-all duration-300`}
+          }  hover:text-black hover:bg-secondary-200 rounded-lg cursor-pointer transition-all duration-300`}
           onClick={() => setSelectedPage(item.link)}
         >
           {item.icon}

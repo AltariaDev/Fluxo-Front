@@ -65,14 +65,14 @@ export default function StreaksRanking() {
             {topUsers.map((user, index) => (
               <div
                 key={user.id}
-                className={`relative flex items-center p-4 rounded-xl transition-all duration-300 ${
+                className={`relative flex items-center p-4 rounded-lg transition-all duration-300 ${
                   index === 0
                     ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-white"
                     : index === 1
-                    ? "bg-gradient-to-r from-gray-300 to-gray-400 text-white"
-                    : index === 2
-                    ? "bg-gradient-to-r from-amber-600 to-amber-800 text-white"
-                    : "bg-white hover:bg-secondary-50"
+                      ? "bg-gradient-to-r from-gray-300 to-gray-400 text-white"
+                      : index === 2
+                        ? "bg-gradient-to-r from-amber-600 to-amber-800 text-white"
+                        : "bg-white hover:bg-secondary-50"
                 }`}
               >
                 <div className="flex items-center gap-4 w-full">

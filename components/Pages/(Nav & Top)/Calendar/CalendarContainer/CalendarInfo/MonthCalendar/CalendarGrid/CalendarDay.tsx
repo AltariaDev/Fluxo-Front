@@ -47,7 +47,7 @@ const CalendarDay = memo(
               ? "bg-primary-50/80 border-primary-200 shadow-sm"
               : "hover:bg-white/80 border-gray-100 hover:shadow-md"
           }
-          border rounded-xl backdrop-blur-sm`}
+          border rounded-lg backdrop-blur-sm`}
         aria-label={format(day, "EEEE, d MMMM yyyy", { locale: es })}
         onClick={handleSelectDay}
       >

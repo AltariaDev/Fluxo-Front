@@ -55,7 +55,7 @@ export default function SupportClient() {
         {supportOptions.map((option) => (
           <div
             key={option.type}
-            className="bg-white border border-primary-500 rounded-2xl shadow-md p-6 flex flex-col items-center text-center gap-4 hover:shadow-lg transition-shadow duration-300"
+            className="bg-white border border-primary-500 rounded-lg shadow-md p-6 flex flex-col items-center text-center gap-4 hover:shadow-lg transition-shadow duration-300"
           >
             {option.icon}
             <h2 className="text-xl font-semibold">{option.title}</h2>

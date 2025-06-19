@@ -11,7 +11,7 @@ export default function NavSettings({
   sections: { id: SettingSection; icon: ReactNode; label: string }[];
 }) {
   return (
-    <div className="sticky top-6 w-full h-full md:w-64 flex flex-col gap-2 p-4 bg-primary-500 rounded-xl flex-shrink-0">
+    <div className="sticky top-6 w-full h-full md:w-64 flex flex-col gap-2 p-4 bg-primary-500 rounded-lg flex-shrink-0">
       {sections.map((section) => (
         <button
           key={section.id}

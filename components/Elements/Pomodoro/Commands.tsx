@@ -21,7 +21,7 @@ export default function Commands({ fullScreen = false }: CommandsProps) {
   const { handleClick } = CommandsUtils();
 
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
-  const baseButtonClass = "relative rounded-2xl";
+  const baseButtonClass = "relative rounded-lg";
   const activeButtonClass = fullScreen
     ? "text-white"
     : "text-primary-500 bg-secondary-100 cursor-pointer";
@@ -43,7 +43,7 @@ export default function Commands({ fullScreen = false }: CommandsProps) {
               button !== undefined && !button.disabled
           )
           .map((button) => (
-            <li key={button.id} id={button.id}> 
+            <li key={button.id} id={button.id}>
               <button
                 onClick={() => handleClick(button.id as CommandAction)}
                 onMouseEnter={() =>

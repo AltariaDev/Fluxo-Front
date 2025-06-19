@@ -34,7 +34,7 @@ export default function NotificationSettings() {
           {Object.entries(notifications).map(([key, value]) => (
             <div
               key={key}
-              className="flex items-center justify-between p-4 rounded-xl text-secondary-600 border border-secondary-600"
+              className="flex items-center justify-between p-4 rounded-lg text-secondary-600 border border-secondary-600"
             >
               <div className="flex items-center gap-3">
                 {key === "sound" ? <Volume2 size={20} /> : <Bell size={20} />}

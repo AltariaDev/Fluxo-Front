@@ -37,7 +37,7 @@ export default function NavInfo({
         <div className="h-8 w-px bg-gray-200" />
         <div className="flex items-center gap-2">
           <button
-            className="p-2 hover:bg-gray-100 rounded-xl transition-all duration-200 hover:scale-105"
+            className="p-2 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105"
             onClick={() =>
               setDate(
                 navType === "Mes" ? addMonths(date, -1) : addDays(date, -1)
@@ -52,7 +52,7 @@ export default function NavInfo({
             })}
           </p>
           <button
-            className="p-2 hover:bg-gray-100 rounded-xl transition-all duration-200 hover:scale-105"
+            className="p-2 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105"
             onClick={() =>
               setDate(navType === "Mes" ? addMonths(date, 1) : addDays(date, 1))
             }
@@ -68,10 +68,10 @@ export default function NavInfo({
         >
           {navType}
         </ButtonDropDown>
-        <button className="p-2.5 hover:bg-gray-100 rounded-xl transition-all duration-200 hover:scale-105">
+        <button className="p-2.5 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105">
           <ListFilter className="w-5 h-5 text-gray-600" />
         </button>
-        <button className="p-2.5 hover:bg-gray-100 rounded-xl transition-all duration-200 hover:scale-105">
+        <button className="p-2.5 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105">
           <Search className="w-5 h-5 text-gray-600" />
         </button>
       </div>

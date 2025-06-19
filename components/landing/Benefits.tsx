@@ -58,7 +58,7 @@ export default function Benefits() {
 
         <div className="mt-20 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
           <div className="relative animate-fade-in">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
               <Image
                 className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
                 src="/images/dashboard-preview.png"
@@ -77,7 +77,7 @@ export default function Benefits() {
               {benefits.map((benefit, index) => (
                 <div
                   key={benefit.id}
-                  className="relative bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-primary-200 hover:border-primary-200 animate-fade-in-up group"
+                  className="relative bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-primary-200 hover:border-primary-200 animate-fade-in-up group"
                   style={{ animationDelay: `${index * 150}ms` }}
                   onClick={() =>
                     setOpenBenefit(
@@ -85,12 +85,12 @@ export default function Benefits() {
                     )
                   }
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <dt className="relative">
                     <button className="flex w-full items-center justify-between text-left cursor-pointer">
                       <div className="flex items-center space-x-4">
                         <div
-                          className={`h-12 w-12 rounded-xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}
+                          className={`h-12 w-12 rounded-lg bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}
                         >
                           <benefit.icon className="h-6 w-6 text-white" />
                         </div>

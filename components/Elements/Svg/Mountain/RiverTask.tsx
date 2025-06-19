@@ -1,4 +1,4 @@
-export default function MountainTask() {
+export default function RiverTask() {
   return (
     <svg
       width="402"

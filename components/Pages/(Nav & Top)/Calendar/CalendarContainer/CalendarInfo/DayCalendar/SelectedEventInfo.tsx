@@ -21,7 +21,7 @@ export default function SelectedEventInfo({
   const selectedEventData = selectedCalendarItem?.data;
   return (
     <div
-      className={`h-full bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 flex-nowrap ${
+      className={`h-full bg-white/80 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 flex-nowrap ${
         selectedEventData ? "w-1/3 p-8" : "w-0"
       }`}
     >
@@ -45,7 +45,7 @@ export default function SelectedEventInfo({
           </div>
 
           <div className="grid grid-cols-2 gap-8">
-            <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="bg-gray-50/50 rounded-lg p-4">
               <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
                 <Clock size={18} />
                 <span>Comienza</span>
@@ -54,7 +54,7 @@ export default function SelectedEventInfo({
                 {format(selectedEventData.startDate, "HH:mm")}
               </div>
             </div>
-            <div className="bg-gray-50/50 rounded-xl p-4">
+            <div className="bg-gray-50/50 rounded-lg p-4">
               <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
                 <Clock size={18} />
                 <span>Finaliza</span>
@@ -65,7 +65,7 @@ export default function SelectedEventInfo({
             </div>
           </div>
 
-          <div className="bg-gray-50/50 rounded-xl p-4">
+          <div className="bg-gray-50/50 rounded-lg p-4">
             <div className="flex items-center gap-2 text-gray-700 font-medium mb-3">
               <User size={18} />
               <span>Participantes</span>
@@ -87,7 +87,7 @@ export default function SelectedEventInfo({
             </div>
           </div>
 
-          <div className="bg-gray-50/50 rounded-xl p-4">
+          <div className="bg-gray-50/50 rounded-lg p-4">
             <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
               <MapPin size={18} />
               <span>Ubicación</span>
@@ -97,7 +97,7 @@ export default function SelectedEventInfo({
             </div>
           </div>
 
-          <div className="bg-gray-50/50 rounded-xl p-4">
+          <div className="bg-gray-50/50 rounded-lg p-4">
             <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
               <MapPin size={18} />
               <span>Categoria</span>
@@ -107,7 +107,7 @@ export default function SelectedEventInfo({
             </div>
           </div>
 
-          <div className="bg-gray-50/50 rounded-xl p-4">
+          <div className="bg-gray-50/50 rounded-lg p-4">
             <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
               <Palette size={18} />
               <span>Color del Evento</span>
@@ -123,7 +123,7 @@ export default function SelectedEventInfo({
             </div>
           </div>
 
-          <div className="bg-gray-50/50 rounded-xl p-4">
+          <div className="bg-gray-50/50 rounded-lg p-4">
             <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
               <LinkIcon size={18} />
               <span>Link</span>
@@ -137,7 +137,7 @@ export default function SelectedEventInfo({
             </a>
           </div>
 
-          <div className="bg-gray-50/50 rounded-xl p-4">
+          <div className="bg-gray-50/50 rounded-lg p-4">
             <div className="flex items-center gap-2 text-gray-700 font-medium mb-2">
               <Bell size={18} />
               <span>Recordatorios</span>

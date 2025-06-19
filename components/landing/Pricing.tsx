@@ -59,7 +59,7 @@ export default function Pricing() {
                 plan.popular
                   ? "bg-gradient-to-br from-primary-500 to-primary-800"
                   : "bg-white"
-              } rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border ${
+              } rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border ${
                 plan.popular ? "border-primary-400" : "border-primary-200"
               } hover:border-primary-200 flex flex-col gap-6 animate-fade-in-up group`}
               style={{ animationDelay: `${index * 200}ms` }}
