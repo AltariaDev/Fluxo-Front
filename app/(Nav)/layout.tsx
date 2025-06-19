@@ -13,7 +13,6 @@ import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import UserProfileInitializer from "@/config/UserProfileInitializer";
 import WebSocketInitializer from "@/config/WebSocketInitializer";
-import { PersistentPomodoro } from "@/components/Elements/PersistentPomodoro/PersistentPomodoro";
 import Toast from "@/components/Reusable/Toast";
 
 const poppinsSans = Poppins({

@@ -1,11 +1,9 @@
 import { TaskType } from "@/interfaces/Task/TaskType";
 import RiverTask from "@/components/Elements/Svg/Mountain/RiverTask";
 import { useState, useEffect, useRef } from "react";
-import { useModalStore } from "@/stores/modalStore";
 import TaskCard from "./ListTask/TaskCard";
 import AnimationElementsListUtils from "@/lib/AnimationElementsListUtils";
 import LoadingStatus from "@/components/Elements/General/LoadingStatus";
-import { useTranslations } from "next-intl";
 
 export default function ListTask({
   filter,
@@ -17,13 +15,11 @@ export default function ListTask({
   loadingTask: boolean;
 }) {
   const listRef = useRef<HTMLDivElement>(null);
-  const t = useTranslations("Common.buttons");
 
   const [changingTaskIds, setChangingTaskIds] = useState<string[]>([]);
   const [filteredTasks, setFilteredTasks] = useState<TaskType[]>([]);
   const [isInitialRender, setIsInitialRender] = useState(true);
 
-  const { setIsOpen } = useModalStore((state) => state.actions);
   const { capturePositions, animateFLIP } = AnimationElementsListUtils({
     listRef,
   });

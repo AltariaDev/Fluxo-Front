@@ -22,7 +22,7 @@ export default function StatsHabits() {
         // Aquí iría la lógica de carga de datos
         setIsLoading(false);
       } catch (err) {
-        setError("Error al cargar los datos");
+        setError("Error al cargar los datos" + err);
         setIsLoading(false);
       }
     };

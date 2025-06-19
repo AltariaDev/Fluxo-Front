@@ -43,7 +43,17 @@ export default function ModalContact({
     priority: "medium",
   });
 
-  const [errors, setErrors] = useState<Partial<ContactForm>>({});
+  const [errors, setErrors] = useState<
+    Partial<{
+      title: string;
+      name: string;
+      email: string;
+      message: string;
+      type: string;
+      priority: "low" | "medium" | "high";
+      attachments: string;
+    }>
+  >({});
   const [isLoading, setIsLoading] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -65,7 +75,15 @@ export default function ModalContact({
   };
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<ContactForm> = {};
+    const newErrors: Partial<{
+      title: string;
+      name: string;
+      email: string;
+      message: string;
+      type: string;
+      priority: "low" | "medium" | "high";
+      attachments: string;
+    }> = {};
 
     if (!form.title.trim()) {
       newErrors.title = t("errors.titleRequired");
@@ -160,7 +178,6 @@ export default function ModalContact({
           placeholder={t("contact.titlePlaceholder")}
           type="text"
           icon={<Captions />}
-          value={form.title}
           onChange={(e) => updateFormField("title", e.target.value)}
         />
 
@@ -255,7 +272,6 @@ export default function ModalContact({
           size="compact"
           button="primary"
           onClick={handleSend}
-          disabled={isLoading}
         >
           {isLoading ? t("sending") : t("send")}
         </Button>

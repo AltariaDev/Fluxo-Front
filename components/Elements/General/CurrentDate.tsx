@@ -3,7 +3,6 @@ import CircularTextTop from "../Svg/CircularTextTop";
 import CircularTextBottom from "../Svg/CircularTextBottom";
 import { es, enUS } from "date-fns/locale";
 import { useLocale } from "next-intl";
-import { useState } from "react";
 
 export default function CurrentDate({
   background = true,
