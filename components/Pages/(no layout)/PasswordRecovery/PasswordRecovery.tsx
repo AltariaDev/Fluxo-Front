@@ -69,7 +69,7 @@ export default function PasswordRecovery() {
         <GreenLogo size="size-26" />
         <p className="text-4xl font-medium mt-2">SherApp</p>
       </div>
-      <div className="w-full max-w-md flex flex-col gap-8 bg-white p-8 rounded-xl shadow-lg">
+      <div className="w-full max-w-md flex flex-col gap-8 bg-white p-8 rounded-lg shadow-lg">
         <div className="flex flex-col items-center gap-3 w-full text-primary-500 text-center">
           <h1 className="text-3xl md:text-4xl font-bold">
             ¿Olvidaste tu contraseña?

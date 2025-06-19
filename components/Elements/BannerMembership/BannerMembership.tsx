@@ -20,7 +20,7 @@ export default function BannerMembership({
     }
   };
   return (
-    <div className="h-40 w-full flex items-center bg-tertiary-100 rounded-2xl relative">
+    <div className="h-40 w-full flex items-center bg-tertiary-100 rounded-lg relative">
       {render()}
     </div>
   );

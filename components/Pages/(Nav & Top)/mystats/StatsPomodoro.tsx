@@ -19,7 +19,6 @@ export default function StatsPomodoro({
   locale: string;
 }) {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -32,14 +31,6 @@ export default function StatsPomodoro({
     return (
       <div className="flex items-center justify-center h-full">
         <p className="text-red-500">{error}</p>
-      </div>
-    );
-  }
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <p className="text-primary-500">Cargando...</p>
       </div>
     );
   }

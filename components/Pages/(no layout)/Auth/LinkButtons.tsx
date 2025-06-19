@@ -33,7 +33,7 @@ export default function LinkButtons({ type }: { type: string }) {
       </div>
       <button
         onClick={initiateGoogleLogin}
-        className="flex-1 w-full active:bg-primary-500 hover:bg-primary-700 hover:text-white active:text-white border border-primary-500 px-2 py-4 rounded-2xl flex items-center justify-center gap-4 transition-colors duration-300 cursor-pointer"
+        className="flex-1 w-full active:bg-primary-500 hover:bg-primary-700 hover:text-white active:text-white border border-primary-500 px-2 py-4 rounded-lg flex items-center justify-center gap-4 transition-colors duration-300 cursor-pointer"
       >
         <p>{t(`${type}.google`)}</p>
         <LinkIcon size={20} />

@@ -106,7 +106,7 @@ export default function Modal() {
   return (
     <div className="fixed left-0 top-0 w-full h-full flex items-center justify-center z-60">
       <div
-        className={`w-[95vw] md:w-[600px] bg-background-primary rounded-2xl p-6 flex flex-col items-end gap-4 drop-shadow-2xl ${
+        className={`w-[95vw] md:w-[600px] bg-background-primary rounded-lg p-6 flex flex-col items-end gap-4 drop-shadow-2xl ${
           isClosing ? "animate-modalClose" : "animate-modalOpen"
         } z-10`}
       >

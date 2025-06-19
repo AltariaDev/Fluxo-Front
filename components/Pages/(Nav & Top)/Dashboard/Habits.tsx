@@ -51,7 +51,7 @@ export default function Habits({ habitsList }: { habitsList: HabitsType[] }) {
         />
 
         <div className="flex w-full items-center place-content-between gap-2">
-          <div className="flex gap-3 bg-white p-2 rounded-xl border-2 border-secondary-200">
+          <div className="flex gap-3 bg-white p-2 rounded-lg border-2 border-secondary-200">
             <div className="flex items-center gap-2">
               <div className="size-3 rounded-full bg-secondary-700" />
               <p className="text-xs font-medium text-primary-500">
@@ -80,7 +80,7 @@ export default function Habits({ habitsList }: { habitsList: HabitsType[] }) {
       {habits.length > 0 ? (
         <HabitsList habits={habits} setHabits={setHabits} />
       ) : (
-        <div className="flex-1 bg-secondary-100 rounded-2xl p-5 flex flex-col items-center justify-center gap-4">
+        <div className="flex-1 bg-secondary-100 rounded-lg p-5 flex flex-col items-center justify-center gap-4">
           <MountainHabits />
           <div className="flex flex-col items-center text-primary-500 text-center">
             <p className="2xl:text-xl font-medium">{t("noHabits")}</p>

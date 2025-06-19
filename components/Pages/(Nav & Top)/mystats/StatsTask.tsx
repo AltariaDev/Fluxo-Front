@@ -8,7 +8,6 @@ import { PromiseGetTasksStats } from "@/interfaces/Dashboard/DashboardType";
 export default function StatsTask({ stats }: { stats: PromiseGetTasksStats }) {
   const [selectedMonth, setSelectedMonth] = useState("start");
   const [selectedYear, setSelectedYear] = useState("2025");
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const monthOptions = [
@@ -26,14 +25,6 @@ export default function StatsTask({ stats }: { stats: PromiseGetTasksStats }) {
     return (
       <div className="flex items-center justify-center h-full">
         <p className="text-red-500">{error}</p>
-      </div>
-    );
-  }
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <p className="text-primary-500">Cargando...</p>
       </div>
     );
   }

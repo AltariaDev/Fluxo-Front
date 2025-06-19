@@ -133,7 +133,7 @@ export default function Timer(/*{ token }: { token: string }*/) {
 
   return (
     <>
-      <div className="w-1/2 max-h-[95vh] overflow-hidden flex-1 flex flex-col place-content-between items-center border border-accent p-4 gap-6 rounded-2xl">
+      <div className="w-1/2 max-h-[95vh] overflow-hidden flex-1 flex flex-col place-content-between items-center border border-accent p-4 gap-6 rounded-lg">
         <TypeTimeButtons />
         <div className="flex place-content-between gap-5 text-6xl relative items-center">
           {/* <Minus

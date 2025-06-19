@@ -4,7 +4,6 @@ import InfoProfile from "./Profile/InfoProfile";
 import XpBar from "./Profile/XpBar";
 
 export default function Profile() {
-
   return (
     <>
       <BannerExemple />

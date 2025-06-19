@@ -13,7 +13,7 @@ export default function DescriptionProfile() {
   >("info");
 
   return (
-    <div className="w-full sm:w-3/4 flex flex-col p-6 gap-6 border border-primary-200 bg-background-primary rounded-2xl relative overflow-hidden">
+    <div className="w-full sm:w-3/4 flex flex-col p-6 gap-6 border border-primary-200 bg-background-primary rounded-lg relative overflow-hidden">
       <NavigationStats
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}

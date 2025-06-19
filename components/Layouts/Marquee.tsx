@@ -8,10 +8,10 @@ export default function Carousel() {
         width={1000}
         height={1000}
         alt="Logo PNJ"
-        className="w-full h-full object-cover rounded-3xl"
+        className="w-full h-full object-cover rounded-lg"
       />
-      <div className="absolute left-0 top-0 bg-white w-[220px] h-[64px] 2xl:h-[80px] rounded-2xl" />
-      <div className="absolute right-6 bottom-0 bg-white w-[220px] h-[64px] 2xl:h-[80px] rounded-2xl" />
+      <div className="absolute left-0 top-0 bg-white w-[220px] h-[64px] 2xl:h-[80px] rounded-lg" />
+      <div className="absolute right-6 bottom-0 bg-white w-[220px] h-[64px] 2xl:h-[80px] rounded-lg" />
     </div>
   );
 }

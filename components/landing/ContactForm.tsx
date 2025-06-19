@@ -17,7 +17,7 @@ export default function ContactForm() {
               ¿Tienes alguna pregunta? Estaremos encantados de ayudarte.
             </p>
           </div>
-          <div className="mt-12 bg-white rounded-2xl shadow-lg p-8 border border-primary-200 animate-fade-in-up">
+          <div className="mt-12 bg-white rounded-lg shadow-lg p-8 border border-primary-200 animate-fade-in-up">
             <form className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-8">
               <div
                 className="animate-fade-in"
@@ -39,7 +39,7 @@ export default function ContactForm() {
                     id="nombre"
                     placeholder="Tu nombre"
                     autoComplete="given-name"
-                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
+                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
                   />
                 </div>
               </div>
@@ -63,7 +63,7 @@ export default function ContactForm() {
                     id="correo"
                     placeholder="tu@email.com"
                     autoComplete="email"
-                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
+                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
                   />
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function ContactForm() {
                     id="telefono"
                     placeholder="Tu teléfono"
                     autoComplete="tel"
-                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
+                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
                   />
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function ContactForm() {
                   <select
                     id="asunto"
                     name="asunto"
-                    className="py-3 px-4 block w-full border border-primary-200 rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
+                    className="py-3 px-4 block w-full border border-primary-200 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
                   >
                     <option value="">Selecciona un asunto</option>
                     <option value="soporte">Soporte técnico</option>
@@ -134,7 +134,7 @@ export default function ContactForm() {
                     name="mensaje"
                     rows={4}
                     placeholder="Tu mensaje aquí..."
-                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
+                    className="py-3 pl-10 pr-4 block w-full border border-primary-200 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-300"
                   />
                 </div>
               </div>

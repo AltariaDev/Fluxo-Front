@@ -1,5 +1,5 @@
 "use client";
-import { MailWarning, Lightbulb, HelpCircle, Bug, Star } from "lucide-react";
+import { Lightbulb, HelpCircle, Bug, Star } from "lucide-react";
 import Button from "@/components/Reusable/Button";
 import { useModalStore } from "@/stores/modalStore";
 import { useProfile } from "@/stores/profileStore";
@@ -55,7 +55,7 @@ export default function SupportClient() {
         {supportOptions.map((option) => (
           <div
             key={option.type}
-            className="bg-white border border-primary-500 rounded-2xl shadow-md p-6 flex flex-col items-center text-center gap-4 hover:shadow-lg transition-shadow duration-300"
+            className="bg-white border border-primary-500 rounded-lg shadow-md p-6 flex flex-col items-center text-center gap-4 hover:shadow-lg transition-shadow duration-300"
           >
             {option.icon}
             <h2 className="text-xl font-semibold">{option.title}</h2>
@@ -68,7 +68,7 @@ export default function SupportClient() {
                 size="large"
                 button="secondary"
                 onClick={() =>
-                  setIsOpen({ text: "contact", type: option.type })
+                  setIsOpen({ text: "contact", other: option.type })
                 }
                 className="w-full"
               >

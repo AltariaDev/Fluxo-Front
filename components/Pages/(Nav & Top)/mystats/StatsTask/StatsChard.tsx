@@ -46,7 +46,7 @@ const CustomTooltip = ({
 }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 backdrop-blur-sm">
+      <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-100 backdrop-blur-sm">
         <p className="font-semibold text-gray-800 mb-2">{label} 2025</p>
         {payload.map(
           (
@@ -157,14 +157,14 @@ export default function StatsChard({
           <div className="h-4 bg-gray-200 rounded w-3/4"></div>
           <div className="h-4 bg-gray-200 rounded w-1/2"></div>
         </div>
-        <div className="h-64 bg-gray-100 rounded-xl mt-6"></div>
+        <div className="h-64 bg-gray-100 rounded-lg mt-6"></div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex items-center gap-3 p-6 bg-white/70 backdrop-blur-sm text-red-700 rounded-xl border border-red-200">
+      <div className="flex items-center gap-3 p-6 bg-white/70 backdrop-blur-sm text-red-700 rounded-lg border border-red-200">
         <svg
           className="w-6 h-6 flex-shrink-0"
           fill="currentColor"
@@ -185,7 +185,7 @@ export default function StatsChard({
   }
 
   return (
-    <div className="bg-white/70 backdrop-blur-sm rounded-xl border border-white/50">
+    <div className="bg-white/70 backdrop-blur-sm rounded-lg border border-white/50">
       <ResponsiveContainer width="100%" height={400}>
         <BarChart
           data={monthlyStats}

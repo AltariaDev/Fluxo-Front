@@ -31,7 +31,7 @@ export default function PrivacySettings() {
       <div className="flex flex-col gap-4">
         <h3 className="text-lg font-semibold">Configuración de Privacidad</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex items-center justify-between p-4 rounded-xl text-secondary-600 border border-secondary-600">
+          <div className="flex items-center justify-between p-4 rounded-lg text-secondary-600 border border-secondary-600">
             <div className="flex items-center gap-3">
               <User size={20} />
               <span>Visibilidad del Perfil</span>
@@ -41,7 +41,7 @@ export default function PrivacySettings() {
               onChange={() => handlePrivacyChange("profileVisibility")}
             />
           </div>
-          <div className="flex items-center justify-between p-4 rounded-xl text-secondary-600 border border-secondary-600">
+          <div className="flex items-center justify-between p-4 rounded-lg text-secondary-600 border border-secondary-600">
             <div className="flex items-center gap-3">
               <Clock size={20} />
               <span>Estado de Actividad</span>

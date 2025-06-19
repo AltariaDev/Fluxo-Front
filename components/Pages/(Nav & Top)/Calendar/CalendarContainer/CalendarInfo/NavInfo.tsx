@@ -31,35 +31,49 @@ export default function NavInfo({
   ];
 
   return (
-    <div className="flex flex-col sm:flex-row w-full items-center place-content-between text-primary-500">
-      <CurrentDate background={false} />
-      <div className="flex gap-4 items-center">
-        <div className="flex items-center gap-3 bg-gray-50 px-4 py-2 rounded-lg">
-          <ChevronLeft
-            className="cursor-pointer hover:text-primary-600 transition-colors"
+    <div className="flex flex-col sm:flex-row w-full items-center justify-between gap-6 mb-8">
+      <div className="flex items-center gap-4">
+        <CurrentDate background={false} />
+        <div className="h-8 w-px bg-gray-200" />
+        <div className="flex items-center gap-2">
+          <button
+            className="p-2 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105"
             onClick={() =>
               setDate(
                 navType === "Mes" ? addMonths(date, -1) : addDays(date, -1)
               )
             }
-          />
-          <p className="font-medium">
+          >
+            <ChevronLeft className="w-5 h-5 text-gray-600" />
+          </button>
+          <p className="font-medium text-gray-700 min-w-[120px] text-center">
             {format(date, navType === "Mes" ? "MMMM" : "dd MMMM", {
               locale: es,
             })}
           </p>
-          <ChevronRight
-            className="cursor-pointer hover:text-primary-600 transition-colors"
+          <button
+            className="p-2 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105"
             onClick={() =>
               setDate(navType === "Mes" ? addMonths(date, 1) : addDays(date, 1))
             }
-          />
+          >
+            <ChevronRight className="w-5 h-5 text-gray-600" />
+          </button>
         </div>
-        <ButtonDropDown items={items} className="border-2 border-primary-500">
+      </div>
+      <div className="flex items-center gap-3">
+        <ButtonDropDown
+          items={items}
+          className="bg-white border border-gray-200 hover:border-gray-300 transition-all duration-200 hover:scale-105"
+        >
           {navType}
         </ButtonDropDown>
-        <ListFilter className="cursor-pointer" />
-        <Search className="cursor-pointer" />
+        <button className="p-2.5 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105">
+          <ListFilter className="w-5 h-5 text-gray-600" />
+        </button>
+        <button className="p-2.5 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-105">
+          <Search className="w-5 h-5 text-gray-600" />
+        </button>
       </div>
     </div>
   );

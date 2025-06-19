@@ -3,7 +3,7 @@ import NotificationItem from "./NotificationItem";
 
 export default function NotificationMenu({ onClick }: { onClick: () => void }) {
   return (
-    <div className="w-110 px-6 py-8 flex flex-col items-end gap-4 absolute right-0 top-10 bg-white z-50 border border-accent rounded-2xl drop-shadow-2xl">
+    <div className="w-110 px-6 py-8 flex flex-col items-end gap-4 absolute right-0 top-10 bg-white z-50 border border-accent rounded-lg drop-shadow-2xl">
       <X size={24} onClick={onClick} className="cursor-pointer" />
       <div className="flex flex-col justify-center gap-4 w-full relative">
         <input

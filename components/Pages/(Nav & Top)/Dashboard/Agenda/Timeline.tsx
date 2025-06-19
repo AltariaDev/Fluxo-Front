@@ -1,7 +1,7 @@
 import TimeLeftBar from "@/components/Elements/Calendar/Timeline/TimeLeftBar";
 import TimelineCard from "@/components/Elements/Calendar/Timeline/TimelineCard";
 import LoadingStatus from "@/components/Elements/General/LoadingStatus";
-import MountainAgenda from "@/components/Elements/Svg/Mountain/MountainAgenda";
+import RiverAgenda from "@/components/Elements/Svg/Mountain/RiverAgenda";
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import CalendarUtils from "@/lib/CalendarUtils";
@@ -116,8 +116,8 @@ export default function Timeline({ loadingEvents }: TimelineProps) {
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center gap-3 justify-center p-2 bg-secondary-100 rounded-2xl w-full h-full">
-              <MountainAgenda />
+            <div className="flex flex-col items-center gap-3 justify-center p-2 bg-secondary-100 rounded-lg w-full h-full">
+              <RiverAgenda />
               <p className="text-primary-500 2xl:text-xl text-center font-medium">
                 {t("noEvents")}
               </p>

@@ -94,7 +94,9 @@ export default function CirclePorcent(stats: PromiseGetPomodoroStats) {
             aria-label={`Progress: ${safePercent}%`}
             role="img"
             onMouseMove={(e: React.MouseEvent<SVGSVGElement>) =>
-              handleMouseMove(e)
+              handleMouseMove(
+                e as unknown as React.MouseEvent<SVGCircleElement>
+              )
             }
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}

@@ -1,22 +1,22 @@
 import TemplateDashboard from "@/components/Elements/General/TemplateBox";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 
-const StreaksBg1 = dynamic(
-  () => import("@/components/Elements/Svg/Streaks/StreaksBg1")
-);
-const StreaksBg2 = dynamic(
-  () => import("@/components/Elements/Svg/Streaks/StreaksBg2")
-);
-const StreaksBg3 = dynamic(
-  () => import("@/components/Elements/Svg/Streaks/StreaksBg3")
-);
-const StreaksBgMax = dynamic(
-  () => import("@/components/Elements/Svg/Streaks/StreaksBgMax")
-);
-const StreaksNull = dynamic(
-  () => import("@/components/Elements/Svg/Streaks/StreaksNull")
-);
+// const StreaksBg1 = dynamic(
+//   () => import("@/components/Elements/Svg/Streaks/StreaksBg1")
+// );
+// const StreaksBg2 = dynamic(
+//   () => import("@/components/Elements/Svg/Streaks/StreaksBg2")
+// );
+// const StreaksBg3 = dynamic(
+//   () => import("@/components/Elements/Svg/Streaks/StreaksBg3")
+// );
+// const StreaksBgMax = dynamic(
+//   () => import("@/components/Elements/Svg/Streaks/StreaksBgMax")
+// );
+// const StreaksNull = dynamic(
+//   () => import("@/components/Elements/Svg/Streaks/StreaksNull")
+// );
 
 export default function Streaks({ number }: { number: number }) {
   const t = useTranslations("Dashboard.streaks");

@@ -61,12 +61,12 @@ export default function Features() {
             {features.map((feature, index) => (
               <div
                 key={feature.name}
-                className="relative group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-primary-200 hover:border-primary-200 animate-fade-in-up gap-3"
+                className="relative group bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border border-primary-200 hover:border-primary-200 animate-fade-in-up gap-3"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">
-                  <div className="absolute -top-4 -left-4 h-14 w-14 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute -top-4 -left-4 h-14 w-14 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <feature.icon
                       className="h-7 w-7 text-white"
                       aria-hidden="true"
